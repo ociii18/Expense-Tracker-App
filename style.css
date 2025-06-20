@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  background: #f4f4f4;
+  color: #333;
+  flex-direction: column;
+
+}
+
+header, footer {
+  background: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  flex: 1;
+}
+
+section {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+#expenses {
+  list-style: none;
+  padding: 0;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-left: 5px solid;
+}
+
+.expense-item.positive {
+  border-color: green;
+}
+
+.expense-item.negative {
+  border-color: red;
+}
+
+button.edit, button.delete {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
